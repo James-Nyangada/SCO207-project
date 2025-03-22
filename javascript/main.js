@@ -1,7 +1,4 @@
-
-  
-  
-  document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", async function () {
     const postsContainer = document.getElementById("posts-container");
 
     try {
@@ -17,7 +14,7 @@
             .map(
                 (blog) => `
                 <article class="blog-post">
-                    <h3>${blog.title}</h3>
+                    <h3><a href="blog-details.html?id=${blog._id}">${blog.title}</a></h3>
                     <p><strong>By:</strong> ${blog.author}</p>
                     <p>${blog.content.substring(0, 150)}...</p>
                     <small>Published on: ${new Date(blog.createdAt).toLocaleDateString()}</small>

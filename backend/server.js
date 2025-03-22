@@ -53,6 +53,19 @@ app.get('/api/posts', async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
+app.get('/api/posts/:id', async (req, res) => {
+    try {
+        const blog = await Blog.findById(req.params.id);
+        if (!blog) {
+            return res.status(404).json({ error: "Blog not found" });
+        }
+        res.json(blog);
+    } catch (error) {
+        console.error("Error fetching blog:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
 
 // Start server
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
