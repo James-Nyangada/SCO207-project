@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Blog Post</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Personal Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="add-blog.html" class="active">Add Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="add-blog-form">
+            <h2>Create New Blog Post</h2>
+            <form id="blog-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-primary">Publish Post</button>
+                </div>
+                <div id="message" class="message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Personal Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./javascript/add-blog.js"></script>
+
+</body>
+</html>
+
